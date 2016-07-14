@@ -5,28 +5,28 @@
 // Gerado em: 2016.07.06 �s 04:37:54 PM BRT 
 //
 
-
 package br.com.ibq;
 
-import java.io.Serializable;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElementRef;
-import javax.xml.bind.annotation.XmlMixed;
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
 
-
 /**
- * <p>Classe Java de itemType complex type.
+ * <p>
+ * Classe Java de itemType complex type.
  * 
- * <p>O seguinte fragmento do esquema especifica o conte�do esperado contido dentro desta classe.
+ * <p>
+ * O seguinte fragmento do esquema especifica o conte�do esperado contido dentro
+ * desta classe.
  * 
  * <pre>
  * &lt;complexType name="itemType">
@@ -46,122 +46,110 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "itemType", propOrder = {
-    "content"
-})
+@XmlType(name = "itemType", propOrder = { "iisIndividual" })
 public class ItemType {
 
-    @XmlElementRef(name = "item", namespace = "http://www.dfpc.eb.mil.br", type = JAXBElement.class, required = false)
-    @XmlMixed
-    protected List<Serializable> content;
-    @XmlAttribute(name = "iis")
-    protected BigInteger iis;
-    @XmlAttribute(name = "produzido")
-    @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar produzido;
-    @XmlAttribute(name = "lote")
-    protected Integer lote;
+	@XmlElement(name = "item", required = true)
+	protected List<IisIndividual> iisIndividual;
+	@XmlAttribute(name = "iis")
+	protected BigInteger iis;
+	@XmlAttribute(name = "produzido")
+	@XmlSchemaType(name = "dateTime")
+	protected XMLGregorianCalendar produzido;
+	@XmlAttribute(name = "lote")
+	protected Integer lote;
 
-    /**
-     * Gets the value of the content property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the content property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getContent().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link JAXBElement }{@code <}{@link ItemType }{@code >}
-     * {@link String }
-     * 
-     * 
-     */
-    public List<Serializable> getContent() {
-        if (content == null) {
-            content = new ArrayList<Serializable>();
-        }
-        return this.content;
-    }
+	/**
+	 * Gets the value of the content property.
+	 * 
+	 * <p>
+	 * This accessor method returns a reference to the live list, not a
+	 * snapshot. Therefore any modification you make to the returned list will
+	 * be present inside the JAXB object. This is why there is not a
+	 * <CODE>set</CODE> method for the content property.
+	 * 
+	 * <p>
+	 * For example, to add a new item, do as follows:
+	 * 
+	 * <pre>
+	 * getContent().add(newItem);
+	 * </pre>
+	 * 
+	 * 
+	 * <p>
+	 * Objects of the following type(s) are allowed in the list
+	 * {@link JAXBElement }{@code <}{@link ItemType }{@code >} {@link String }
+	 * 
+	 * 
+	 */
+	public List<IisIndividual> getIisIndividual() {
+		if (iisIndividual == null) {
+			iisIndividual = new ArrayList<IisIndividual>();
+		}
+		return this.iisIndividual;
+	}
 
-    /**
-     * Obt�m o valor da propriedade iis.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
-     */
-    public BigInteger getIis() {
-        return iis;
-    }
+	/**
+	 * Obt�m o valor da propriedade iis.
+	 * 
+	 * @return possible object is {@link BigInteger }
+	 * 
+	 */
+	public BigInteger getIis() {
+		return iis;
+	}
 
-    /**
-     * Define o valor da propriedade iis.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
-     */
-    public void setIis(BigInteger value) {
-        this.iis = value;
-    }
+	/**
+	 * Define o valor da propriedade iis.
+	 * 
+	 * @param value
+	 *            allowed object is {@link BigInteger }
+	 * 
+	 */
+	public void setIis(BigInteger value) {
+		this.iis = value;
+	}
 
-    /**
-     * Obt�m o valor da propriedade produzido.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public XMLGregorianCalendar getProduzido() {
-        return produzido;
-    }
+	/**
+	 * Obt�m o valor da propriedade produzido.
+	 * 
+	 * @return possible object is {@link XMLGregorianCalendar }
+	 * 
+	 */
+	public XMLGregorianCalendar getProduzido() {
+		return produzido;
+	}
 
-    /**
-     * Define o valor da propriedade produzido.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public void setProduzido(XMLGregorianCalendar value) {
-        this.produzido = value;
-    }
+	/**
+	 * Define o valor da propriedade produzido.
+	 * 
+	 * @param value
+	 *            allowed object is {@link XMLGregorianCalendar }
+	 * 
+	 */
+	public void setProduzido(XMLGregorianCalendar value) {
+		this.produzido = value;
+	}
 
-    /**
-     * Obt�m o valor da propriedade lote.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
-     */
-    public Integer getLote() {
-        return lote;
-    }
+	/**
+	 * Obt�m o valor da propriedade lote.
+	 * 
+	 * @return possible object is {@link Integer }
+	 * 
+	 */
+	public Integer getLote() {
+		return lote;
+	}
 
-    /**
-     * Define o valor da propriedade lote.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
-     */
-    public void setLote(Integer value) {
-        this.lote = value;
-    }
+	/**
+	 * Define o valor da propriedade lote.
+	 * 
+	 * @param value
+	 *            allowed object is {@link Integer }
+	 * 
+	 */
+	public void setLote(Integer value) {
+		this.lote = value;
+	}
 
 }
