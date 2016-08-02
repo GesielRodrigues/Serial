@@ -11,6 +11,7 @@ import javax.xml.bind.Unmarshaller;
 import br.com.ibq.ProductType;
 import br.com.ibq.ReceiptOrderType;
 import br.com.ibq.produtos.Brinel;
+import br.com.ibq.produtos.Britex;
 import br.com.ibq.produtos.Composto;
 import br.com.ibq.produtos.Cordel;
 import br.com.ibq.produtos.Estopim;
@@ -32,10 +33,14 @@ public class Serial {
 
 		List<ProductType> products = r.getProduct();
 		for (ProductType product : products) {
-//			System.out.println(product.getName());
+			// System.out.println(product.getName());
 			if (product.getName().equals("BRINEL")) {
 				Brinel brinel = new Brinel(product);
 				seriais.append(brinel.getSeriais());
+			}
+			if (product.getName().equals("REFORCADOR")) {
+				Britex britex = new Britex(product);
+				seriais.append(britex.getSeriais());
 			}
 			if (product.getName().equals("DIN.")) {
 				Composto composto = new Composto(product);
