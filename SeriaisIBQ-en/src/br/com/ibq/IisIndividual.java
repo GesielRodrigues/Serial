@@ -1,7 +1,5 @@
 package br.com.ibq;
 
-import java.math.BigInteger;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
@@ -18,14 +16,8 @@ public class IisIndividual {
 		return iis;
 	}
 
-	/**
-	 * Define o valor da propriedade iis.
-	 * 
-	 * @param value
-	 *            allowed object is {@link BigInteger }
-	 * 
-	 */
 	public void setIis(String value) {
 		this.iis = value;
 	}
+
 }

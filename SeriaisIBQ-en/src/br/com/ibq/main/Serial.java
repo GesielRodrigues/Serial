@@ -32,7 +32,7 @@ public class Serial {
 
 		List<ProductType> products = r.getProduct();
 		for (ProductType product : products) {
-			System.out.println(product.getName());
+//			System.out.println(product.getName());
 			if (product.getName().equals("BRINEL")) {
 				Brinel brinel = new Brinel(product);
 				seriais.append(brinel.getSeriais());

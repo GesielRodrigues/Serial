@@ -46,11 +46,11 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "itemType", propOrder = { "iisIndividual" })
+@XmlType(name = "itemType", propOrder = { "iisSaco" })
 public class ItemType {
 
 	@XmlElement(name = "item", required = true)
-	protected List<IisIndividual> iisIndividual;
+	protected List<IisSaco> iisSaco;
 	@XmlAttribute(name = "iis")
 	protected BigInteger iis;
 	@XmlAttribute(name = "lot")
@@ -82,11 +82,11 @@ public class ItemType {
 	 * 
 	 * 
 	 */
-	public List<IisIndividual> getIisIndividual() {
-		if (iisIndividual == null) {
-			iisIndividual = new ArrayList<IisIndividual>();
+	public List<IisSaco> getIisSaco() {
+		if (iisSaco == null) {
+			iisSaco = new ArrayList<IisSaco>();
 		}
-		return this.iisIndividual;
+		return this.iisSaco;
 	}
 
 	/**
