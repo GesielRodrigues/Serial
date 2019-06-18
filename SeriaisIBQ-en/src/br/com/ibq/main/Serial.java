@@ -59,6 +59,10 @@ public class Serial {
 				Estopim estopim = new Estopim(product);
 				seriais.append(estopim.getSeriais());
 			}
+			if (product.getName().equals("BRITAPIM")) {
+				Estopim estopim = new Estopim(product);
+				seriais.append(estopim.getSeriais());
+			}
 			if (product.getName().equals("ANFOMAX")) {
 				Granulado granulado = new Granulado(product);
 				seriais.append(granulado.getSeriais());

@@ -44,10 +44,13 @@ public class Programa {
 				Cordel cordel = new Cordel(produto);
 				seriais.append(cordel.getSeriais());
 			}
-
 			if (produto.getNome().equals("RETARDO")) {
 				Retardo retardo = new Retardo(produto);
 				seriais.append(retardo.getSeriais());
+			}
+			if (produto.getNome().equals("BRITAPIM")) {
+				Estopim estopim = new Estopim(produto);
+				seriais.append(estopim.getSeriais());
 			}
 			if (produto.getNome().equals("PIROPIM")) {
 				Estopim estopim = new Estopim(produto);

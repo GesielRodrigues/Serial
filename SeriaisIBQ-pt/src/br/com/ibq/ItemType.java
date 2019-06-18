@@ -2,7 +2,7 @@
 // Este arquivo foi gerado pela Arquitetura JavaTM para Implementa��o de Refer�ncia (JAXB) de Bind XML, v2.2.8-b130911.1802 
 // Consulte <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas as modifica��es neste arquivo ser�o perdidas ap�s a recompila��o do esquema de origem. 
-// Gerado em: 2016.07.06 �s 04:37:54 PM BRT 
+// Gerado em: 2016.07.06 �s 04:47:51 PM BRT 
 //
 
 package br.com.ibq;
@@ -33,11 +33,11 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="item" type="{http://www.dfpc.eb.mil.br}itemType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="item" type="{http://www.itsco.com.br/ras2c/pas/receiptOrder}itemType" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *       &lt;attribute name="iis" type="{http://www.w3.org/2001/XMLSchema}integer" />
- *       &lt;attribute name="produzido" type="{http://www.w3.org/2001/XMLSchema}dateTime" />
- *       &lt;attribute name="lote" type="{http://www.w3.org/2001/XMLSchema}int" />
+ *       &lt;attribute name="lot" type="{http://www.w3.org/2001/XMLSchema}int" />
+ *       &lt;attribute name="produced" type="{http://www.w3.org/2001/XMLSchema}dateTime" />
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -46,18 +46,18 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "itemType", propOrder = { "iisIndividual" })
+@XmlType(name = "itemType", propOrder = { "iisSaco" })
 public class ItemType {
 
 	@XmlElement(name = "item", required = true)
-	protected List<IisIndividual> iisIndividual;
+	protected List<IisSaco> iisSaco;
 	@XmlAttribute(name = "iis")
 	protected BigInteger iis;
-	@XmlAttribute(name = "produzido")
+	@XmlAttribute(name = "lot")
+	protected Integer lot;
+	@XmlAttribute(name = "produced")
 	@XmlSchemaType(name = "dateTime")
-	protected XMLGregorianCalendar produzido;
-	@XmlAttribute(name = "lote")
-	protected Integer lote;
+	protected XMLGregorianCalendar produced;
 
 	/**
 	 * Gets the value of the content property.
@@ -82,11 +82,11 @@ public class ItemType {
 	 * 
 	 * 
 	 */
-	public List<IisIndividual> getIisIndividual() {
-		if (iisIndividual == null) {
-			iisIndividual = new ArrayList<IisIndividual>();
+	public List<IisSaco> getIisSaco() {
+		if (iisSaco == null) {
+			iisSaco = new ArrayList<IisSaco>();
 		}
-		return this.iisIndividual;
+		return this.iisSaco;
 	}
 
 	/**
@@ -111,45 +111,45 @@ public class ItemType {
 	}
 
 	/**
-	 * Obt�m o valor da propriedade produzido.
-	 * 
-	 * @return possible object is {@link XMLGregorianCalendar }
-	 * 
-	 */
-	public XMLGregorianCalendar getProduzido() {
-		return produzido;
-	}
-
-	/**
-	 * Define o valor da propriedade produzido.
-	 * 
-	 * @param value
-	 *            allowed object is {@link XMLGregorianCalendar }
-	 * 
-	 */
-	public void setProduzido(XMLGregorianCalendar value) {
-		this.produzido = value;
-	}
-
-	/**
-	 * Obt�m o valor da propriedade lote.
+	 * Obt�m o valor da propriedade lot.
 	 * 
 	 * @return possible object is {@link Integer }
 	 * 
 	 */
-	public Integer getLote() {
-		return lote;
+	public Integer getLot() {
+		return lot;
 	}
 
 	/**
-	 * Define o valor da propriedade lote.
+	 * Define o valor da propriedade lot.
 	 * 
 	 * @param value
 	 *            allowed object is {@link Integer }
 	 * 
 	 */
-	public void setLote(Integer value) {
-		this.lote = value;
+	public void setLot(Integer value) {
+		this.lot = value;
+	}
+
+	/**
+	 * Obt�m o valor da propriedade produced.
+	 * 
+	 * @return possible object is {@link XMLGregorianCalendar }
+	 * 
+	 */
+	public XMLGregorianCalendar getProduced() {
+		return produced;
+	}
+
+	/**
+	 * Define o valor da propriedade produced.
+	 * 
+	 * @param value
+	 *            allowed object is {@link XMLGregorianCalendar }
+	 * 
+	 */
+	public void setProduced(XMLGregorianCalendar value) {
+		this.produced = value;
 	}
 
 }
